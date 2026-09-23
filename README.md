@@ -1,2 +1,3 @@
-# sohamchanda1.github.io
-Academic Page
+# Soham Chanda academic website
+
+
