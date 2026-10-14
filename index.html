@@ -36,18 +36,21 @@
     #research .publication-tile-link { position: absolute; inset: 0; z-index: 1; }
     #research .research-card a:not(.publication-tile-link) { position: relative; z-index: 2; }
 
-    /* Let the biography flow beside the portrait and then below it. */
+    /* Consistent spacing, with text flowing beneath the portrait. */
     #about #iml4g { display: flow-root; padding: 0; background: #fff; }
     #about #i0oua {
       float: right;
-      width: 36%;
+      width: 34%;
+      max-width: 380px;
       height: auto;
       min-height: 0;
-      margin: 0 0 24px 32px;
+      margin: 40px 40px 24px 32px;
       padding: 0;
       display: block;
+      overflow: hidden;
       background: #fff;
       border: 0;
+      border-radius: 20px;
     }
     #about #i0z8l { display: block; width: 100%; height: auto; }
     #about #if7in {
@@ -64,10 +67,44 @@
       max-width: none;
       overflow: visible;
     }
-    #about #in59h { overflow: hidden; }
-    @media (max-width: 640px) {
-      #about #i0oua { float: none; width: 100%; margin: 0; }
+    #about #in59h { display: block; overflow: hidden; margin: 0 0 24px; }
+    #about #itvyo, #about #ifull, #about #irsmp,
+    #about #i2e4c, #about #i10yy > p:empty,
+    #about #i8e0h br { display: none; }
+    #about #id25v { margin: 0; line-height: 1.15; }
+    #about #iwe6lj { display: block; margin-top: 8px; }
+    #about #ideip { margin: 20px 0 0; }
+    #about #ina1u {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0 0 24px;
+    }
+    #about #ina1u .stat-card { padding: 16px; min-height: 0; }
+    #about #ina1u .stat-label { margin: 0 0 8px; line-height: 1.3; }
+    #about #ina1u .stat-value { margin: 0; line-height: 1.5; }
+    #about #i10yy { margin: 0; line-height: 1.7; }
+    #about #ixu09, #about #inednj, #about #i9xiw { margin: 0 0 16px; }
+    #about #i10yy .announcement-wrap { margin: 24px 0 16px; }
+    #about #i10yy .announcement-bubble {
+      max-width: 100%;
+      box-sizing: border-box;
+      white-space: normal;
+      line-height: 1.5;
+    }
+    #about #ihchb { margin: 0; line-height: 1.6; }
+    #about #iidy3 { margin: 24px 0 0; padding: 0; }
+    @media (max-width: 760px) {
+      #about #i0oua {
+        float: none;
+        width: calc(100% - 48px);
+        max-width: 320px;
+        margin: 24px auto 0;
+      }
       #about #if7in { padding: 24px; }
+    }
+    @media (max-width: 480px) {
+      #about #ina1u { grid-template-columns: 1fr; gap: 12px; }
     }
   </style>
   </head>
